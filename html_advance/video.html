@@ -1,0 +1,106 @@
+<!DOCTYPE html>>
+<html lang="en">
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alivia Rizka Wardani">
+    <meta name="nim" content="244311035">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Video</h1>
+            <video width="200px" height="150px" controls muted>
+                <source src="gambar/video/Skateboard.mp4" type="video/mp4">
+                Browser tidak mendukung
+            </video>
+            <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/fn3KWM1kuAw">           
+            </iframe>
+            <br>
+            <p><b>Kesimpulan: </b></p>
+            <p>Video yang belum diberi atribut controls, video tidak bisa diputar dan hanya menampilkan gambar awal video.
+                Tetapi ketika video sudah diberi controls maka video bisa diputar. Kemudian melakukan percobaan setelah controls
+                ditambahkan autoplay dan muted. ketika ditambahkan autoplay maka video secera otomatis akan terputar dengan volume yang sesuai, 
+                sedangkan ketika ditambahkan muted maka video tidak langsung terputar dan volume video tidak ada atau muted.
+            </p>
+            <p>Menambahkan sebuah iframe yang diisi sebuah video yang diambil dari youtube. Video ini memiliki width 420 dan height 315.
+                Video akan ditampilkan di sebelah video pertama. 
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
