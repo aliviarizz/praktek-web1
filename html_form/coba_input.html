@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe input</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <form action="/action_page.php" target="_top" method="post">
+        <label for="depan">Nama depan:</label>
+        <input type="text" id="depan" name="i_nama" value="Budi"><br>
+        <label for="belakang">Nama belakang:</label>
+        <input type="text" id="belakang" name="i_belakang" value="Prawira"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p>Jika Anda mengklik tombol "kirim", data formulir akan dikirim ke halaman bernama "/action_page.php".</p>
+
+    <p><b>Kesimpulan:</b></p>
+    <p>Ketika mengklik tombol reset, data otomatis akan kembali kosong. Tetapi karena inputnya sudah terisi dengan value maka ketika diklik tombol reset, data akan tetap dalam keadaan sama.</p>
+    <p>Ketika mengklik tombol kirim, data akan terkirim ke halaman bernama "action_page.php".</p>
+    <p>Selanjutnya kode program ditambahkan sebuah target dan hasil uji cobanya:</p>
+
+    <ol>
+        <li>Target="_blank": Halaman setelah diklik tombol kirim maka form akan terbuka di tab baru.</li>
+        <li>Target="_self": Halaman setelah diklik tombol kirim maka form dikirim pada tab yang sama.</li>
+        <li>Target="_parent": Halaman setelah diklik tombol kirim maka jika dalam iframe, akan membuka di parent frame.</li>
+        <li>Target="_top": Halaman setelah diklik tombol kirim maka akan membuka halaman penuh.</li>
+    </ol>
+
+    <p>Menambah sebuah "method", ada dua method yaitu get dan post. Setiap jenisnya ini memiliki perbedaan tersendiri dalam penggunaannya.</p>
+    <p>Method yang pertama adalah method "get", ketika menambahkan method ini maka data akan ditampilkan di URL.</p>
+    <p>Method yang kedua adalah method "post", ketika menambahkan method "post" maka data tidak akan tampil atau tersembunyi.</p>
+
+</body>
+</html>
