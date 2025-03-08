@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Login</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset style="background-color: rgb(201, 180, 220);">
+        <label for="input1">Nama Depan</label>
+        <input type="text" name="input_1" id="input1">
+        <br><br>
+
+        <label for="input2">Nama Belakang</label>
+        <input type="text" name="input_2" id="input2">
+        </fieldset>
+        <br>
+
+        <label for="imakanan">Pilih Pesanan Anda</label>
+        <select id="imakanan" name="makanan">
+            <option value="001">Mie Ayam</option>
+            <option value="002" selected>Bakso</option>
+            <option value="003">Es Jeruk</option>
+            <option value="003">Es Teh</option>
+        </select>
+        <br><br>
+
+        <label for="warna">Silakan Pilih Warna Mangkok</label>
+        <input type="color" name="warna" id="warna">
+        <br><br>
+        <label for="deskripsi">Tulis Deskripsi Anda</label><br>
+        <textarea id="deskripsi" name="deskripsi"></textarea>
+        <br><br>
+
+        <input type="submit" value="Kirim" rows="3" cols="6">
+        <input type="reset">
+        <input type="button" value="Oke" onclick="alert('Selamat Datang')">
+    </form>
+</body>
+
+</html>
