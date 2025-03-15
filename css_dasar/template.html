@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header {
+            background-color: blue;
+            padding: 10px;
+            h1 {
+                color: yellow;
+                margin-bottom: 0;
+                text-shadow: -1px -1px 0 black,  
+                         1px -1px 0 black,
+                        -1px  1px 0 black,
+                         1px  1px 0 black;
+            }
+            p {
+                color: white;
+                margin-top: 0;
+            }
+        }
+        .content {
+            display: -webkit-flex;
+            display: flex;
+        }
+        .link {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 200px;
+            padding: 20px;
+            border-style: dashed;
+            border-color: skyblue;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            a.hover {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            a.hover:hover {
+                color: lightblue;
+                text-decoration: underline;
+            }
+        }
+        .article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            padding: 10px;
+            text-align: center;
+            img {
+                width: 100px;
+            }
+            h7 {
+                font-size: 15pt;
+            }
+            p {
+                color: red;
+            }
+        }
+        .footer {
+            background-color: rgb(164, 213, 232);
+            padding: 10px;
+            text-align: right;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Halo CSS !</h1>
+        <p>Ini adalah website saya</p>
+    </div>
+    <div class="content">
+        <div class="link">
+            <a href="#">Menu 1</a><br>
+            <a href="#">Menu 2</a><br>
+            <a href="#">Menu 3</a><br>
+            <a href="#">Menu 4</a><br>
+            <a href="#">Menu 5</a><br>
+            <a class="hover" href="#">Menu 6</a><br>
+        </div>
+        <div class="article">
+            <img src="gambar/icon.png">
+            <h2>TRPL</h2>
+            <h7>Politeknik Negeri Madiun</h7>
+            <p>Mewujudkan pendidikan tinggi vokasi dalam bidang Teknologi Rekayasa Perangkat Lunak dan
+                penerapannya yang berkualitas, inovatif, dan berdaya saing Nasional.
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Alivia Rizka Wardani | 244311035 | TRPL</p>
+    </div>
+</body>    
+</html>
