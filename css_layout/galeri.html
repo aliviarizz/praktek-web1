@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: teal;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .foto {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            justify-content: center;
+        }
+        .foto img {
+            width: 350px; 
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10%;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Cowok Sayaaa</h1>
+    </div>
+ 
+    <!-- Galeri Foto -->
+    <div class="foto">
+        <img src="image/jaemin.jpeg" alt="Jaemin">
+        <img src="image/jeno.jpeg" alt="Jeno">
+        <img src="image/mark.jpeg" alt="Mark">
+        <img src="image/haechan.jpeg" alt="Haechan">
+        <img src="image/jisung.jpeg" alt="Jisung">
+        <img src="image/chenle.jpeg" alt="Chenle">
+        <img src="image/renjun.jpeg" alt="Renjun">
+        <img src="image/sakuya.jpeg" alt="Sakuya">
+        <img src="image/ryo.jpeg" alt="Ryo">
+        <img src="image/sion.jpeg" alt="Sion">
+        <img src="image/jaehee.jpeg" alt="Jaehee">
+        <img src="image/yushi.jpeg" alt="Yushi">
+        <img src="image/riku.jpeg" alt="Riku">
+        <img src="image/yangyang.jpeg" alt="Yangyang">
+        <img src="image/jaehyun.jpeg" alt="Jaehyun">
+        <img src="image/taeyong.jpeg" alt="Taeyong">
+        <img src="image/kun.jpeg" alt="Kun">
+        <img src="image/jungwoo.jpeg" alt="Jungwoo">
+    </div>
+</body>
+</html>

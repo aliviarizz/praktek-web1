@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <style>
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+        .layout > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .header {
+            grid-column: 1 / 4;
+        }
+        .menu {
+            grid-row: 2 / 4;
+        }
+        .main {
+            grid-column: 2 / 3;
+        }
+        .right {
+            grid-column: 3 / 4;
+        }
+        .footer {
+            grid-column: 2 / 4;
+        }
+    </style>
+    
+</head>
+<body>
+<div class="layout">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="main">Main</div>
+    <div class="right">Right</div>
+    <div class="footer">Footer</div>
+</div>
+</body>
+</html>

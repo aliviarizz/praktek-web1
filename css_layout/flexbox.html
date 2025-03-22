@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah_flex {
+            display: flex;
+            background-color: bisque;
+            padding: 10px;
+            flex-flow: row wrap;
+            justify-content:center;
+        }
+        .wadah_flex > div {
+            background-color: blanchedalmond;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <p>Kesimpulan skenario 1 adalah:
+        ketika menambahkan background-color maka backgroud akan berubah menjadi warna
+        yang diinginkan, disini menggunakan warna bisque. selain itu, juga menambahkan padding
+        10px agar terlihat rapi dan enak dipandang. 
+    </p>
+    <p>Kesimpulan skenario 2 adalah: 
+        ketika menambahkan style dengan ".margin_flex > div" 
+        maka setiap anak div akan berubah. pertama adalah memberi background-color dengan warna
+        blanchedalmond lalu margin 10 px, padding 20px serta font-size 30px. setiap div akan
+        mengikuti style tersebut.
+    </p>
+    <p>Kesimpulan skenario 3 adalah: 
+        ketika menambahkan flex-direction dengan nilai coloumn maka 
+        flex setiap div akan melebar dan angka akan turun ke bawah. ketika flex-direction nilai row 
+        tidak ada yang berubah masih dengan posisi awal sebelum diberi flex-direction tetapi ketika
+        nilainya row-reverse maka angkanya menjadi terbalik yang awalnya dimulai dari 1-12 menjadi 12-1.
+    </p>
+    <p>Kesimpulan skenario 4 adalah:
+        Ketika menambahkan flex-wrap dengan nilai nowrap maka tidak terjadi apa-apa masih dalam bentuk
+        dan posisi yang sama ketika layar dikecilkan. Tetapi ketika nilainya wrap maka ketika dikecilkan 
+        layarnya angka-angka tersebut akan turun ke bawah sesuai urutan sedangkan jika nilainya wrap-reverse
+        nilai akan naik ke atas.
+    </p>
+    <p>Kesimpulan skenario 5 adalah:
+        ketika menambahkan flex-flow untuk menggabungkan flex-direction dengan flex-wrap sehingga di dalam kode
+        mencantumkan dua nilai, ketika nilainya row wrap maka posisi div masih sama row dan ketika halaman/layar 
+        dikecilkan akan turun ke bawah sesuai urutan.ketika nilainya coloumn wrap posisi akan sama saat flex-direction
+        coloumn dan ketika dikecilkan tidak ada perubahan karena div sudah dalam keadaan baris atau turun ke bawah.
+    </p>
+    <p>Kesimpulan skenario 6 adalah:
+        ketika menambahkan justify-content dengan nilai space-around maka setiap div akan memiliki space mulai dari 
+        bagian depan dan akhir. Ketika nilainya space-between maka setiap div akan memiliki jarak dan pada bagian awal 
+        akhir jaraknya lebih kecil daripada diantara div dengan div. ketika nilainya center maka div akan berkumpul di 
+        tengah-tengah.
+    </p>
+</body>
+</html>

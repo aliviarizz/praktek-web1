@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            padding: 10px;
+            grid-template-columns: auto auto auto auto;
+        }
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+        }
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+    <div class="item1">6</div>
+    <div class="item1">7</div>
+    <div class="item1">8</div>
+    <div>Kesimpulan skenario 1:
+        ketika menambahkan grid-column-start maka elemen .item1 akan dimulai dari kolom ke-1 dan
+        ketika menambahkan grid-column-start maka elemen .item1 akan berakhir di kolom ke-3 (menempati
+        dua kolom, yaitu kolom 1 dan 2).
+    </div>
+    <div>Kesimpulan skenario 2:
+        Saat menggunakan auto auto auto auto, semua kolom menyesuaikan lebarnya secara otomatis. 
+        Jika diubah menjadi auto auto, hanya dua kolom yang terbentuk dengan lebar mengikuti isi. 
+        Dengan 70px 300px auto 40px, beberapa kolom memiliki ukuran tetap, sementara satu kolom fleksibel. 
+        Sedangkan 10px 500px 20px 10px membuat kolom dengan lebar yang sudah ditentukan. 
+    </div>
+</div>
+</body>
+</html>
