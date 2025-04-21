@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var message = "Hello";
+        let pesan = "Selamat datang kawan";
+        const port = 3306; /* tidak bisa diubah */
+        let kosong;
+
+        let mahasiswa = {
+            nim : "244311035",
+            nama : "Alivia Rizka Wardani",
+            alamat : {
+                desa : "Keraskulon",
+                jln : "Gambyak"
+            }
+        };
+
+        alert(pesan);
+
+        console.log(typeof (message));
+        console.log(typeof (port));
+        console.log(typeof (kosong));
+        console.log(mahasiswa.nim);
+        console.log(mahasiswa['nim']);
+        console.log(mahasiswa['alamat']['desa']);
+
+        mahasiswa.nim = "222222333"; /*modifikasi*/
+
+        var error = true;
+        if(error){
+            console.log(error)
+        }
+
+        for (const isi in mahasiswa){
+            console.log(isi + ":" + mahasiswa[isi]);
+        }
+    </script>
+
+    <h1>Hello DOM!</h1>
+    <div id="p">Terima kasih</div>
+
+    <script>
+        let judul = document.querySelector("h1");
+        judul.textContent = "Hi, javascript";
+
+        let x = document.getElementById("p");
+    </script>
+
+    <input type="radio" name="makanan" value="nasi goreng"> Nasi goreng
+    <input type="radio" name="makanan" value="nasi rames">Nasi rames
+    <input type="radio" name="makanan" value="nasi uduk">Nasi uduk
+
+    <button id="tombol_pesan">PESAN</button>
+
+    <p id="output"> ... </p>
+
+    <script>
+        let tmbl = document.getElementById("tombol_pesan");
+        let o = document.getElementById("output");
+        tmbl.addEventListener('click', () => {
+            let pesanan = document.getElementsByName("makanan");
+            pesanan.forEach((p) => {
+                if (p.checked){
+                    console.log(p.value);
+                    console.log(o);
+                    o.innerHTML = "Pesanan anda adalah " + p.value;
+                }
+            })
+        })
+    </script>
+</body>
+</html>
