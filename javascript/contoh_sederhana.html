@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh jQuery Sederhana</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <button id="toggleBtn">Tampilkan/Sembunyikan</button>
+  <p id="text" style="display: none;">Halo, ini adalah paragraf yang bisa disembunyikan atau ditampilkan.</p>
+
+  <script>
+    $(document).ready(function(){
+      $('#toggleBtn').click(function(){
+        $('#text').toggle(); // Menampilkan atau menyembunyikan paragraf
+      });
+    });
+  </script>
+
+</body>
+</html>

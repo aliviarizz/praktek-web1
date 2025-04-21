@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Dialog dengan Progressbar</title>
+
+  <!-- jQuery & jQuery UI CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <style>
+    #progressbar {
+      margin-top: 20px;
+    }
+    .ui-dialog-titlebar-close {
+      display: none;
+    }
+    #startDownload {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="startDownload">Mulai Download</button>
+
+  <div id="downloadDialog" title="Sedang Mengunduh..." style="display: none;">
+    <p>Mohon tunggu, proses download sedang berjalan.</p>
+    <div id="progressbar"></div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      // Inisialisasi dialog
+      $("#downloadDialog").dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: false,
+        draggable: false,
+        resizable: false
+      });
+
+      // Saat tombol diklik
+      $("#startDownload").click(function(){
+        $("#progressbar").progressbar({
+          value: 0
+        });
+
+        $("#downloadDialog").dialog("open");
+
+        // Simulasi proses download
+        var progress = 0;
+        var interval = setInterval(function(){
+          progress += 5;
+          $("#progressbar").progressbar("value", progress);
+
+          if(progress >= 100){
+            clearInterval(interval);
+            $("#downloadDialog").dialog("option", "title", "Selesai!");
+            $("#downloadDialog").html("<p>Download selesai!</p>");
+            setTimeout(function(){
+              $("#downloadDialog").dialog("close");
+            }, 2000);
+          }
+        }, 300);
+      });
+    });
+  </script>
+
+</body>
+</html>

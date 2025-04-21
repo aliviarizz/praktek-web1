@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Sederhana dengan jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #menuBtn {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #menuList {
+      display: none;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      width: 200px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    #menuList a {
+      display: block;
+      padding: 8px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    #menuList a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="menuBtn">☰ Menu</button>
+  <div id="menuList">
+    <a href="#">Beranda</a>
+    <a href="#">Tentang</a>
+    <a href="#">Kontak</a>
+    <a href="#">Keluar</a>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#menuBtn').click(function(){
+        $('#menuList').slideToggle(); // Menampilkan/menyembunyikan menu dengan efek slide
+      });
+    });
+  </script>
+
+</body>
+</html>

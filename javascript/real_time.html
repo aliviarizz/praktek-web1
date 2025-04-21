@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jam Digital Sederhana</title>
+</head>
+<body>
+  <h1>Waktu Saat Ini:</h1>
+  <div id="datetime">Loading...</div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const tanggal = now.toLocaleDateString('id-ID');
+      const waktu = now.toLocaleTimeString('id-ID');
+      document.getElementById("datetime").innerHTML = tanggal + " " + waktu;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); 
+  </script>
+</body>
+</html>
